@@ -49,38 +49,6 @@ const KeepStateEditor: React.FC<EditorProps> = ({ value, ...props }) => {
   );
   return (
     <>
-      <FormGroup row={true}>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={allowMove}
-              onChange={onAllowMoveChanged}
-              color="primary"
-            />
-          }
-          label="Allow move in edit mode"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={allowResize}
-              onChange={onAllowResizeChanged}
-              color="primary"
-            />
-          }
-          label="Allow resize in edit mode"
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={hide}
-              onChange={onSethideChanged}
-              color="primary"
-            />
-          }
-          label="hide"
-        />
-      </FormGroup>
       <div
         style={{
           display: hide ? 'none' : 'block',
@@ -117,6 +85,7 @@ elements.forEach((element, index) => {
     element
   );
 });
+
 
 // Render as beautified mark up (html)
 ReactDOM.render(
